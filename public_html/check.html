@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title>提交订单</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div id="warp">
+			<header class="mui-bar mui-bar-nav head">
+				<div class="mui-left mui-icon mui-icon-back" onclick="javascript:history.back(-1);"></div>
+			</header>
+			<div class="menu check">
+				<ul class="mui-table-view addord">
+			      	<li class="mui-table-view-cell maga">
+			      	  <span>我的菜单</span>
+			      	</li>
+			     	<li class="mui-table-view-cell mmain">
+			     	  	<span>火腿三明治</span>
+			     	  	<span>×<span>2</span></span>
+			     	  	<span>￥<span>20</span></span>
+			     	</li>
+			      	<li class="mui-table-view-cell mmain">
+			     	  	<span>香草拿铁</span>
+			     	  	<span>×<span>2</span></span>
+			     	  	<span>￥<span>20</span></span>
+			     	</li>
+			     	<li class="mui-table-view-cell mmain">
+			     	  	<span>香草拿铁</span>
+			     	  	<span>×<span>2</span></span>
+			     	  	<span>￥<span>20</span></span>
+			     	</li>
+			     	<li class="mui-table-view-cell mmain">
+			     	  	<span>香草拿铁</span>
+			     	  	<span>×<span>2</span></span>
+			     	  	<span>￥<span>20</span></span>
+			     	</li>
+			    </ul>
+			</div>
+			<div class="discount">
+				<ul class="mui-table-view">
+			     	<li class="mui-table-view-cell mmain">
+			     	  	<span>合计</span>
+			     	  	<span>×<span>8</span></span>
+			     	  	<span>￥<span>20</span></span>
+			     	</li>
+			     	<li class="mui-table-view-cell mmain">
+			     	  	<span class="disc1">不参与优惠金额</span>
+			     	  	<span></span>
+			     	  	<span>￥<span>11</span></span>
+			     	</li>
+			     	<li class="mui-table-view-cell mmain">
+			     	  	<span class="disc2">参与优惠金额</span>
+			     	  	<span></span>
+			     	  	<span>￥<span>21</span></span>
+			     	</li>
+			    </ul>
+			</div>
+			<div class="activity">
+				 <ul class="mui-table-view">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right act" href="javascript:void(0)">
+				        	<span>活动优惠</span>
+				        	<span>活动优惠</span>
+				        </a>
+				    </li>
+				</ul>
+			</div>
+			<div class="remarks">
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right act" href="javascript:void(0)">
+				        	<span>优惠券</span>
+				        	<span>不使用优惠券</span>
+				        </a>
+				    </li>
+					<div class="mui-input-row">
+						<label>订单备注</label>
+						<input class="bz" type="text" placeholder="请输入备注">
+					</div>
+				</ul>
+			</div>
+			<div class="checkfoot">
+				<span>实付：
+					<span>￥
+						<span>40</span>
+					</span>
+				</span>
+				<span><a href="">确定买单</a></span>
+			</div>
+		</div>
+		<script id="che" type="text/html">
+			  	<span>香草拿铁</span>
+			 	<span>×<span>2</span></span>
+			  	<span>￥<span>20</span></span>
+		</script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var che = template(document.getElementById('che').innerHTML,{});
+			var clord = document.createElement("li");
+			clord.className = 'mui-table-view-cell mmain';
+			clord.innerHTML = che;
+			document.getElementsByClassName("addord")[0].appendChild(clord);
+		</script>
+	</body>
+</html>

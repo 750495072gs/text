@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>产品介绍页</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<style type="text/css">
+			html,body{
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<form action="" method="post">
+				<header class="mui-bar mui-bar-nav indhead">
+					<div class="mui-left mui-icon mui-icon-back" onclick="javascript:history.back(-1);"></div>
+				</header>
+				<div class="intbanner">
+					<img src="img/comm1.png"/>
+				</div>
+				<div class="intmain">
+					<div class="intmains1">
+						<div>
+							<div>三明治</div>
+							<div>￥<span>20</span></div>
+						</div>
+						<div class="mui-numbox intbox" data-numbox-step='1'  data-numbox-min='0' data-numbox-max='99'>
+							<button class="mui-btn mui-numbox-btn-minus btn" type="button"><div class="zero">-</div></button>
+							<input class="mui-numbox-input" readonly="readonly" type="number" />
+							<button class="mui-btn mui-numbox-btn-plus btn" type="button"><div class="bzero">+</div></button>
+						</div>
+					</div>
+					<div class="intmains2">
+						<div>商品信息</div>
+						<div class="article">
+							<div>介绍文章：</div>
+							<div>我们都知道三明治是什麼。基本上就是用两片面包，中间夹了火腿、乳酪、蔬菜等，快速、营养又方便的食物。它不需要经过繁复的切洗烹煮的料理过程，是忙碌的现代人最容易打发一餐的方式。
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="foot">
+					<div class="fimg"><img src="img/foot1.png"/></div>
+					<div class="fsl">2</div>
+					<div class="fshu"><span>￥</span><span>20</span></div>
+					<input class="fsub" type="submit" value="去结算"/>
+				</div>
+			</form>
+		</div>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//这个是当0时隐藏input
+			$(".zero").click(function(){
+				if($(this).parent().parent().children().eq(1).val()==0){
+					$(this).parent().parent().children().eq(1).hide();
+				}
+			})//这个是当大于0时显示input
+			$(".bzero").click(function(){
+				if($(this).parent().parent().children().eq(1).val()!=0){
+					$(this).parent().parent().children().eq(1).show();
+				}
+			})
+		</script>
+	</body>
+</html>
