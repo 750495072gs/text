@@ -29,9 +29,13 @@ body,html{
 	border-radius:50%;
 	overflow: hidden;
 	float: left;
+	position: relative;
 }
 .banner1>img{
-	width: 100%;
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
 }
 .banner2{
 	float: left;
