@@ -997,7 +997,7 @@ input[type=reset].mui-disabled,
 input[type=reset]:disabled,
 input[type=submit].mui-disabled,
 input[type=submit]:disabled {
-	opacity: 0
+	opacity: 0;
 }
 
 .mui-btn-blue,

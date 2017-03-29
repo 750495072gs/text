@@ -77,6 +77,7 @@ body,html{
     position: fixed;
     width: 90px;
     z-index: 10;
+    top: 129px;
 }
 .bigclass>div{
 	padding: 15px 0;
@@ -154,7 +155,7 @@ body,html{
 }
 .mui-numbox{
 	height: 25px;
-	width: 75px;
+	width: 80px;
 }
 .zero,.bzero{
 	width: 100%;
@@ -170,6 +171,9 @@ body,html{
     background-color: #00bedf !important;
     color: white !important;
 }
+/*.mui-btn:disabled>div{
+	display: none;
+}*/
 .mui-numbox-input{
 	display: none;
 }

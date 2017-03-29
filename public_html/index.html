@@ -35,17 +35,17 @@
 					<div class="banner2">英策思叮公众号</div>
 					<a href="javascript:void(0)" class="banner3"><span><img src="img/gz1.png"/></span><span>关注</span></a>
 				</div>
+				<!--左边的分类-->
+				<div class="bigclass">
+					<div>店铺名称</div>
+					<div>专场</div>
+					<div>热销</div>
+					<div>主食</div>
+					<div>新品美食</div>
+					<div>鲜果</div>
+					<div>饮品</div>
+				</div>
 				<div id="indmain">
-					<!--左边的分类-->
-					<div class="bigclass">
-						<div>店铺名称</div>
-						<div>专场</div>
-						<div>热销</div>
-						<div>主食</div>
-						<div>新品美食</div>
-						<div>鲜果</div>
-						<div>饮品</div>
-					</div>
 					<div class="samlclass">
 						<!--店铺名称-->
 						<div class="samlclassm">
@@ -290,17 +290,12 @@
 			//这个是当0时隐藏input
 			$(".zero").click(function(){
 				zero();wg();
-				
 			})
 			//这个是当大于0时显示input
 			$(".bzero").click(function(){
 				zero();wg();
 			})
-			$(".mui-numbox-input").each(function(){
-					if($(this).val()!=0){
-						$(this).show();
-					}
-			})
+			zero();
 			function zero(){
 				$(".mui-numbox-input").each(function(){
 					if($(this).val()==0){
