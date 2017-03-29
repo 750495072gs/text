@@ -4,7 +4,7 @@
 }
 body,html{
 	color: #3f3f3f;
-	    background-color: #efeff4;
+	background-color: #efeff4;
 }
 
 .banner{
@@ -12,7 +12,7 @@ body,html{
 	background-image: url(../img/banner1.png);
 	background-size: 100% 100%;
 	color: white;
-	    position: fixed;
+	position: fixed;
     top: 0;
     width: 100%;
     z-index: 20;
@@ -188,8 +188,10 @@ body,html{
 	left: 20px;
 	width: 55px;
 	height: 55px;
+	border-radius:50%;
 }
 .fimg>img{
+	display: block;
 	width: 100%;
 }
 .fshu{
@@ -197,6 +199,7 @@ body,html{
 	font-size: 19px;
 	top: 13px;
 	left: 85px;
+	font-size: 17px;
 }
 .fsl{
 	width: 20px;
@@ -409,4 +412,80 @@ body,html{
 }
 .checkfoot>span:nth-child(2)>a{
 	color: white;
+}
+/*交易详情*/
+.rec{
+	margin-top: 44px;
+}
+.msuc{
+	padding: 17px 15px;
+	width: 134px;
+}
+.msuc>img{
+	display: block;
+	width: 100%;
+}
+.order{
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: white;
+	font-size: 15px;
+}
+.orderh{
+	padding: 30px 0;
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0 15px;
+	text-align: center;
+}
+.orderh>div:nth-child(2){
+	font-size: 36px;
+	margin-top: 6px;
+}
+.orderm{
+	margin: 0 15px;
+	padding: 14px 0;
+	color: #737373;
+}
+.orderms{
+	margin-bottom: 8px;
+}
+.orderms:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+.orderms>div:nth-child(1){
+	float: left;
+}
+.orderms>div:nth-child(2){
+	float: right;
+}
+.follow{
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 8px 15px;
+	margin-top: 20px;
+	background-color: white;
+}
+.gzh{
+	color: #00bedf;
+}
+.follow:after{
+	clear: both;
+	display: block;
+	content: "";
+}
+.follow>div:nth-child(1){
+	float: left;
+	font-size: 14px;
+	margin-top: 9px;
+}
+.follow>a:nth-child(2){
+	float: right;
+	font-size: 15px;
+    padding: 4px 15px;
+    color: white;
+    background-color: #21b100;
+    border-radius: 20px;
+    margin-top: 8px;
 }

@@ -276,7 +276,7 @@
 				</div>
 			
 			<div id="foot">
-				<div class="fimg"><img src="img/foot1.png"/></div>
+				<div class="fimg"><img src="img/foot.png"/></div>
 				<div class="fsl">2</div>
 				<div class="fshu"><span>￥</span><span>20</span></div>
 				<input class="fsub" type="submit" value="去结算"/>
@@ -289,17 +289,18 @@
 		<script type="text/javascript">
 			//这个是当0时隐藏input
 			$(".zero").click(function(){
-				zero();
+				zero();wg();
+				
 			})
 			//这个是当大于0时显示input
 			$(".bzero").click(function(){
-				zero();
+				zero();wg();
 			})
-//			$(".mui-numbox-input").each(function(){
-//					if($(this).val()!=0){
-//						$(this).show();
-//					}
-//			})
+			$(".mui-numbox-input").each(function(){
+					if($(this).val()!=0){
+						$(this).show();
+					}
+			})
 			function zero(){
 				$(".mui-numbox-input").each(function(){
 					if($(this).val()==0){
@@ -309,6 +310,37 @@
 					}
 				})
 			}
+			//购物车判断
+			wg();
+			function wg(){
+				var a = 0;
+				$(".mui-numbox-input").each(function(){
+					a+= Number($(this).val());
+				})
+				if(a==0){
+					$(".fimg").css({
+						"background-color": "#b4b4b4"
+					})
+					$(".fshu").css({
+						"color":"#b4b4b4"
+					})
+					$(".fshu").html("购物车是空的");
+					$(".fsl").hide();
+					$(".fsub").hide();
+				}else{
+					$(".fimg").css({
+						"background-color": "#00bedf"
+					})
+					$(".fshu").css({
+						"color":"#00bedf"
+					})
+					$(".fshu").html("<span>￥</span><span>20</span>");//这里需要绑定数据
+					$(".fsl").show();
+					$(".fsub").show();
+				}
+			}
+			
+			
 			//这是点击左边分类跳到对应分类
 			$(".bigclass").children().click(function(){
 				$(".bigclass").children().each(function(){
