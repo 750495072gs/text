@@ -72,6 +72,7 @@ body,html{
     overflow: scroll;
     padding-top: 129px;
     padding-bottom: 48px; 
+    -webkit-overflow-scrolling: touch;
 }
 .bigclass{
     position: fixed;
@@ -92,7 +93,7 @@ body,html{
     position: absolute;
     right: 0;
     left: 0;
-    margin-bottom: 48px;
+   	padding-bottom: 48px;
 }
 .samlmianhead{
 	font-size: 15px;
@@ -115,7 +116,7 @@ body,html{
 	height: 62px;
 	position: relative;
 	border-radius:6px;
-	border: 1px solid #dedede;
+	overflow: hidden;
 }
 .samlmian>div:nth-child(1)>img{
 	height: 100%;
@@ -236,9 +237,10 @@ body,html{
 	box-shadow: none;
 	border: none;
 	z-index: 21;
+	background-color: rgba(255,255,255,0.4);
 }
 .indhead>.mui-icon-back:before{
-	color: white;
+	color: black;
 }
 
 /*产品介绍页*/
