@@ -58,24 +58,40 @@
 			     	</li>
 			    </ul>
 			</div>
-			<div class="activity">
-				 <ul class="mui-table-view">
-				    <li class="mui-table-view-cell">
-				        <a class="mui-navigate-right act" href="javascript:void(0)">
-				        	<span>活动优惠</span>
-				        	<span>活动优惠</span>
-				        </a>
-				    </li>
+			<div class="activity mui-input-group" >
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right act act1" href="#"><span>活动优惠</span><span>活动优惠</span></a>
+						<div class="mui-collapse-content lastrow">
+							<div class="mui-input-row">
+						    	<span class="mir1">买一送一</span><input class="mir2" type="radio" name="activity" value="买一送一" />
+						    </div>
+						    <div class="mui-input-row">
+						    	<span class="mir1">满十减一</span><input class="mir2" type="radio" name="activity" value="满十减一" />
+						    </div>
+						    <div class="mui-input-row">
+						        <span class="mir1">多买多送</span><input class="mir2" type="radio" name="activity" value="多买多送" />
+						    </div>
+						</div>
+					</li>
 				</ul>
 			</div>
-			<div class="remarks">
+			<div class="remarks mui-input-group">
 				<ul class="mui-table-view">
-				    <li class="mui-table-view-cell">
-				        <a class="mui-navigate-right act" href="javascript:void(0)">
-				        	<span>优惠券</span>
-				        	<span>不使用优惠券</span>
-				        </a>
-				    </li>
+				    <li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right act act2" href="#"><span>优惠券</span><span>不使用优惠券</span></a>
+						<div class="mui-collapse-content lastrow">
+							<div class="mui-input-row">
+						    	<span class="mir1">买一送一</span><input class="mir3" type="radio" name="remarks" value="买一送一" />
+						    </div>
+						    <div class="mui-input-row">
+						    	<span class="mir1">满十减一</span><input class="mir3" type="radio" name="remarks" value="满十减一" />
+						    </div>
+						    <div class="mui-input-row">
+						        <span class="mir1">多买多送</span><input class="mir3" type="radio" name="remarks" value="多买多送" />
+						    </div>
+						</div>
+					</li>
 					<div class="mui-input-row">
 						<label>订单备注</label>
 						<input class="bz" type="text" placeholder="请输入备注">
@@ -97,6 +113,7 @@
 			  	<span>￥<span>20</span></span>
 		</script>
 		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			var che = template(document.getElementById('che').innerHTML,{});
@@ -104,6 +121,14 @@
 			clord.className = 'mui-table-view-cell mmain';
 			clord.innerHTML = che;
 			document.getElementsByClassName("addord")[0].appendChild(clord);
+			//点击input，val值出现
+			$(".mir2").click(function(){
+				$(".act1").eq(0).children().eq(1).html($(this).val());
+			})
+			$(".mir3").click(function(){
+				$(".act2").eq(0).children().eq(1).html($(this).val());
+			})
+			
 		</script>
 	</body>
 </html>
